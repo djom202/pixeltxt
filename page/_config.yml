@@ -1,0 +1,13 @@
+# GitHub Pages project site: https://<user>.github.io/<repo>/
+# If the repository is renamed, update baseurl to match the repo name.
+title: Pixeltxt
+description: >-
+  CLI to automate image personalization by compositing text layers on a base image.
+url: 'https://djom202.github.io'
+baseurl: '/pixeltxt'
+markdown: kramdown
+permalink: pretty
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
