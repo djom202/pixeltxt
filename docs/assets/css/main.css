@@ -64,6 +64,8 @@
   
   /* Layout */
   --max-width: 1280px;
+  /* Features grid width cap (defaults to section width; override to tune e.g. 72rem) */
+  --features-grid-max-width: var(--max-width);
   --header-height: 64px;
 }
 
@@ -490,6 +492,16 @@ img {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: var(--space-lg);
+}
+
+/* Wide screens: 3 equal flexible columns (2 rows for 6 cards), fill container up to --features-grid-max-width */
+@media (min-width: 1025px) {
+  .features-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: 100%;
+    max-width: var(--features-grid-max-width);
+    margin-inline: auto;
+  }
 }
 
 .feature-card {
@@ -1059,10 +1071,6 @@ img {
   
   .features-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .feature-card:last-child {
-    grid-column: span 2;
   }
 }
 
