@@ -1,0 +1,28 @@
+# Example config (.yml). From repo root: pnpm run build && pixeltxt run --cwd examples -c pixeltxt.yml
+# (If pixeltxt.yaml exists in the same folder, auto-discovery picks it first unless you pass -c.)
+# From this folder: pixeltxt run -c pixeltxt.yml
+base: ./sample.jpg
+output: ./result.png
+layers:
+  - type: text
+    text: 'Pixeltxt cli example output'
+    x: 290
+    y: 257
+    fontSize: 26
+    color: '#000000'
+    fontFamily: sans-serif
+    anchor: middle
+  - type: text
+    text: 'Automated overlays'
+    x: 156
+    y: 348
+    fontSize: 15
+    color: '#000000'
+    anchor: middle
+  - type: text
+    text: 'Automated overlays 2'
+    x: 382
+    y: 348
+    fontSize: 15
+    color: '#000000'
+    anchor: middle
