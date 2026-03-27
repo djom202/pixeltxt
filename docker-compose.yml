@@ -1,0 +1,9 @@
+services:
+  pixeltxt:
+    build: .
+    image: pixeltxt-cli:local
+    volumes:
+      - ./:/work
+    working_dir: /work
+    entrypoint: ['node', '/app/dist/cli.js']
+    command: ['run', '--cwd', '/work']
