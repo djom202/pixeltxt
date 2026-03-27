@@ -37,7 +37,8 @@
     "test:golden:update": "pnpm exec tsx scripts/update-golden-visual.ts",
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit",
-    "audit": "pnpm audit --audit-level=moderate"
+    "audit": "pnpm audit --audit-level=moderate",
+    "package": "npm pack --dry-run"
   },
   "engines": {
     "node": ">=20"

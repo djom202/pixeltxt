@@ -1,0 +1,43 @@
+# Published tarball is driven by package.json "files" (dist + docs at repo root).
+# This file documents exclusions and applies if the allow-list is ever broadened.
+
+# Source, tests, and fixtures
+src/
+tests/
+examples/
+
+# Documentation site and repo guides (not the root README/LICENSE/CHANGELOG shipped via "files")
+docs/
+docsfiles/
+
+# CI, hooks, and build helpers
+.github/
+.husky/
+scripts/
+
+# TypeScript, lint, test, and formatter config
+tsconfig*.json
+vitest*.ts
+eslint.config.js
+prettier.config.cjs
+commitlint.config.mjs
+.prettierignore
+
+# Docker (not needed for npm consumers)
+Dockerfile
+docker-compose.yml
+
+# Lockfiles (consumers resolve their own tree)
+pnpm-lock.yaml
+package-lock.json
+npm-shrinkwrap.json
+
+# Coverage, caches, and local artifacts
+coverage/
+.nyc_output/
+.eslintcache
+*.tgz
+
+# Env and secrets
+.env
+.env.*
