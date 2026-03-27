@@ -123,15 +123,15 @@ See [`examples/pixeltxt.yaml`](./examples/pixeltxt.yaml).
 | `pnpm run test:coverage`      | Build + Vitest with coverage (thresholds on `src/`; see `coverage/index.html`)    |
 | `pnpm run audit`              | `pnpm audit --audit-level=moderate` (dependency advisories)                       |
 
-See [`docs/testing.md`](./docs/testing.md) for visual and golden test details.
+See [`docsfiles/testing.md`](./docsfiles/testing.md) for visual and golden test details.
 
 ## Development workflow
 
-Husky runs **lint-staged** on commit, **Commitlint** on the message (Conventional Commits), and **lint + typecheck + tests with coverage + audit** on push. See [`docs/contributing.md`](./docs/contributing.md).
+Husky runs **lint-staged** on commit, **Commitlint** on the message (Conventional Commits), and **lint + typecheck + tests with coverage + audit** on push. See [`docsfiles/contributing.md`](./docsfiles/contributing.md).
 
 ## Architecture
 
-See [`docs/architecture.md`](./docs/architecture.md).
+See [`docsfiles/architecture.md`](./docsfiles/architecture.md).
 
 ## Publishing to npm
 

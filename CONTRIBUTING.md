@@ -2,7 +2,7 @@
 
 Thank you for your interest in **pixeltxt-cli**. This document is the entry point for
 contributors; detailed local tooling (Husky, coverage, audit) lives in
-[`docs/contributing.md`](docs/contributing.md).
+[`docsfiles/contributing.md`](docsfiles/contributing.md).
 
 ## Code of conduct
 
@@ -47,7 +47,7 @@ pnpm test
 ```
 
 Commit messages must pass **Commitlint** (Conventional Commits). Hooks run **lint-staged** on
-commit and broader checks on push—see [`docs/contributing.md`](docs/contributing.md) for the
+commit and broader checks on push—see [`docsfiles/contributing.md`](docsfiles/contributing.md) for the
 full table and coverage/audit notes.
 
 ## License

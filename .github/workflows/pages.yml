@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'page/**'
+      - 'docs/**'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
 
@@ -29,14 +29,14 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.3'
-          working-directory: page
+          working-directory: docs
 
       - name: Bundle install
-        working-directory: page
+        working-directory: docs
         run: bundle install --jobs 4 --retry 3
 
       - name: Build Jekyll
-        working-directory: page
+        working-directory: docs
         run: bundle exec jekyll build -d _site
         env:
           JEKYLL_ENV: production
@@ -44,7 +44,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: page/_site
+          path: docs/_site
 
   deploy:
     environment:

@@ -3,7 +3,7 @@
 Build locally:
 
 ```bash
-cd page
+cd docs
 bundle install
 bundle exec jekyll serve --livereload
 ```
