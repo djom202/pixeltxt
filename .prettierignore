@@ -1,7 +1,8 @@
 dist
 node_modules
 coverage
-page/_site
-page/.jekyll-cache
+docs/_site
+docs/.jekyll-cache
+docs/index.md
 pnpm-lock.yaml
 package-lock.json

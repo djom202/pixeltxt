@@ -232,25 +232,23 @@ description: Automate image personalization with text overlays using a YAML or J
 
 <span class="comment"># Text layers with positioning</span>
 <span class="key">layers</span>:
-
-- <span class="key">id</span>: <span class="string">title</span>
-  <span class="key">text</span>: <span class="string">Summer Vibes</span>
-  <span class="key">font</span>: <span class="string">./fonts/Bold.ttf</span>
-  <span class="key">fontSize</span>: <span class="number">64</span>
-  <span class="key">color</span>: <span class="string">#ffffff</span>
-  <span class="key">x</span>: <span class="number">100</span>
-  <span class="key">y</span>: <span class="number">80</span>
-  <span class="key">anchor</span>: <span class="string">start</span>
-
-- <span class="key">id</span>: <span class="string">subtitle</span>
-<span class="key">text</span>: <span class="string">August 2024</span>
-<span class="key">font</span>: <span class="string">./fonts/Regular.ttf</span>
-<span class="key">fontSize</span>: <span class="number">32</span>
-<span class="key">color</span>: <span class="string">#e2e8f0</span>
-<span class="key">x</span>: <span class="number">100</span>
-<span class="key">y</span>: <span class="number">140</span></code></pre>
-</div>
-</div>
+  - <span class="key">type</span>: <span class="string">text</span>
+    <span class="key">text</span>: <span class="string">Summer Vibes</span>
+    <span class="key">fontPath</span>: <span class="string">./fonts/Bold.ttf</span>
+    <span class="key">fontSize</span>: <span class="number">64</span>
+    <span class="key">color</span>: <span class="string">#ffffff</span>
+    <span class="key">x</span>: <span class="number">100</span>
+    <span class="key">y</span>: <span class="number">80</span>
+    <span class="key">anchor</span>: <span class="string">start</span>
+  - <span class="key">type</span>: <span class="string">text</span>
+    <span class="key">text</span>: <span class="string">August 2024</span>
+    <span class="key">fontPath</span>: <span class="string">./fonts/Regular.ttf</span>
+    <span class="key">fontSize</span>: <span class="number">32</span>
+    <span class="key">color</span>: <span class="string">#e2e8f0</span>
+    <span class="key">x</span>: <span class="number">100</span>
+    <span class="key">y</span>: <span class="number">140</span></code></pre>
+      </div>
+    </div>
   </div>
 </section>
 
