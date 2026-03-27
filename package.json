@@ -1,0 +1,101 @@
+{
+  "name": "pixeltxt-cli",
+  "version": "0.1.0",
+  "description": "CLI to automate image personalization with text and layer overlays using Sharp",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "pixeltxt": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md"
+  ],
+  "scripts": {
+    "build": "tsc && node ./scripts/add-shebang.mjs",
+    "clean": "rm -rf dist",
+    "dev": "tsx src/cli.ts",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "prepare": "husky",
+    "prepublishOnly": "npm run clean && npm run build",
+    "test": "pnpm run build && vitest run",
+    "test:coverage": "pnpm run build && vitest run --coverage",
+    "test:golden": "pnpm run build && vitest run --config vitest.golden.config.ts",
+    "test:golden:update": "pnpm exec tsx scripts/update-golden-visual.ts",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "audit": "pnpm audit --audit-level=moderate"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "cli",
+    "pixeltxt",
+    "image",
+    "sharp",
+    "overlay",
+    "automation",
+    "yaml"
+  ],
+  "author": "Jonathan Olier <djom202@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/djom202/pixeltxt.git"
+  },
+  "bugs": {
+    "url": "https://github.com/djom202/pixeltxt/issues"
+  },
+  "homepage": "https://djom202.github.io/pixeltxt/",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "commander": "^13.1.0",
+    "js-yaml": "^4.1.0",
+    "sharp": "^0.33.5",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^20.5.0",
+    "@commitlint/config-conventional": "^20.5.0",
+    "@eslint/js": "^9.23.0",
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^22.13.14",
+    "@vitest/coverage-v8": "^3.2.4",
+    "eslint": "^9.23.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-import-x": "^4.9.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.0",
+    "pixelmatch": "^7.1.0",
+    "prettier": "^3.5.3",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.28.0",
+    "vitest": "^3.0.9"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,mjs,cjs}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,yml,yaml,md}": [
+      "prettier --write"
+    ]
+  }
+}
