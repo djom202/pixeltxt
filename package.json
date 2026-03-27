@@ -1,6 +1,6 @@
 {
   "name": "pixeltxt-cli",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "CLI to automate image personalization with text and layer overlays using Sharp",
   "type": "module",
   "main": "./dist/index.js",
