@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, chmodSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -8,3 +8,5 @@ const content = readFileSync(cliPath, 'utf8');
 if (!content.startsWith('#!/usr/bin/env node\n')) {
   writeFileSync(cliPath, `#!/usr/bin/env node\n${content}`);
 }
+// Ensure the CLI file is executable
+chmodSync(cliPath, 0o755);
