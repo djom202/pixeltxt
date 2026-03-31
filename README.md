@@ -23,6 +23,24 @@ npm install -g pixeltxt-cli
 pnpm add -g pixeltxt-cli
 ```
 
+### Post-install PATH configuration
+
+After global installation, a postinstall script automatically detects your shell and adds npm's global bin directory to your PATH if it's not already there. This ensures the `pixeltxt` command is available immediately.
+
+The script:
+
+- Detects your shell (zsh, bash, fish) and updates the appropriate config file (`~/.zshrc`, `~/.bashrc`, or `~/.config/fish/config.fish`)
+- Adds the line `export PATH="/opt/homebrew/bin:$PATH"` (or the equivalent for your npm global bin directory)
+- Prints instructions to reload your shell or restart your terminal
+
+If you prefer to configure PATH manually, add this line to your shell config file:
+
+```bash
+export PATH="$(npm config get prefix)/bin:$PATH"
+```
+
+Then restart your terminal or run `source ~/.zshrc` (or `source ~/.bashrc` for bash).
+
 Local development:
 
 ```bash

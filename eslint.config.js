@@ -41,6 +41,7 @@ export default tseslint.config(
       'eslint.config.js',
       'prettier.config.cjs',
       'commitlint.config.mjs',
+      'postinstall.mjs',
       'scripts/**',
     ],
   },
